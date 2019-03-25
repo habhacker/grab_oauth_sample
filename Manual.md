@@ -52,7 +52,7 @@ curl --request POST \
   --data 'client_id=d0052582fc3c4a8daf82943d0fb8686d&code_verifier=namannamannamannamannamannamannamannamannamannamannaman&grant_type=authorization_code&redirect_uri=http%3A%2F%2Fdev.naman.com%3A8000%2Fcallback.html&code=26bf18f0ec05461fb6ba683f266c9182'
 ```
 
-This will reqturn you `access_token` which you can use to get profile information.
+This will return you `access_token` which you can use to get profile information.
 
 
 ## 3. Get Profile
