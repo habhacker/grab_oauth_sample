@@ -9,7 +9,6 @@ function initiateOAuthFlow(){
     redirectUri: 'http://dev.naman.com:8000/callback.html', // Needs to be your redirect URL
     scope: ['openid', 'profile.read'].join(' '), // Needs to be the scope you need
     acrValues: ['consent_ctx:country=sg'].join(' '),
-    id_token_hint: id_token
   };
 
   //3. Get the grabIDClient
@@ -19,7 +18,7 @@ function initiateOAuthFlow(){
   //4. Make Authorization request
   grabIdClient.getOpenIdConfiguration()
           .then(() => {
-            grabIdClient.makeAuthorizationRequest()
+            grabIdClient.makeAuthorizationRequest(null, id_token)
           })
           .catch(error => alert(error.toString()))
 
