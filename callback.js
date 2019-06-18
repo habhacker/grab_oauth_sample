@@ -36,7 +36,7 @@ function handleTokenResponse() {
 }
 
 function getProfile(accessToken) {
-  fetch('https://api.grab.com/grabid/v1/oauth2/userinfo', {
+  fetch('https://partner-api.grab.com/grabid/v1/oauth2/userinfo', {
     headers: {
       'Authorization': `Bearer ${accessToken}`
     }
